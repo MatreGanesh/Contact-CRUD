@@ -3,7 +3,6 @@ const ContactForm = require('../Model/ContactForm');
 const createContact = async (req, res) => {
     try {
         console.log("Hiiii");
-        // console.log("Coming from frontend :", req.body);
 
         const { name, email, contact } = req.body;
 

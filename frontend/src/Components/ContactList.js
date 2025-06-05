@@ -26,7 +26,7 @@ export default function ContactList() {
 
     const deleteContact = async (id) => {
         try {
-            const response = await fetch(`http://localhost:5000/api/contactForm/deleteContact/${id}`, {
+            const response = await fetch(`${process.env.REACT_APP_API_BASE}/contactForm/deleteContact/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',
@@ -49,7 +49,7 @@ export default function ContactList() {
 
     const editContact = async (id) => {
         try {
-            const response = await fetch(`http://localhost:5000/api/contactForm/editContactById/${id}`);
+            const response = await fetch(`${process.env.REACT_APP_API_BASE}/contactForm/editContactById/${id}`);
             const data = await response.json();
             // console.log("ContactList ", data);
 
